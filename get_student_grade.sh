@@ -27,6 +27,7 @@ do
 	else 	
 		iterator=$((iterator+1))
 		line_num=$iterator
+		break
 	fi
 done < $filename
 
