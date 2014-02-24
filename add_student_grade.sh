@@ -1,6 +1,6 @@
 #!/bin/bash
 
-filename=/home/zheyuan/student_grades.csv
+filename=./191_sample.csv
 #find the row the selected student is in
 look_for_stud () {
 local count=1

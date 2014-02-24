@@ -1,6 +1,6 @@
 #!/bin/bash
 
-filename=/home/zheyuan/student_grades.csv
+filename=./191_sample.csv
 #read the categories/assignments
 IFS=", " read -a categories <<< $(cat $filename|head -1)
 #echo $categories

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-filename=/home/zheyuan/student_grades.csv
+filename=./191_sample.csv
 #retrieve the first line of file
 assignments=$(cat $filename | head -1)
 #retrieve the second line

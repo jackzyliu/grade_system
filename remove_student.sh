@@ -1,6 +1,6 @@
 #!/bin/bash
 
-filename=/home/zheyuan/student_grades.csv
+filename=./191_sample.csv
 
 #retrieve the pennkeys of all students
 count=1

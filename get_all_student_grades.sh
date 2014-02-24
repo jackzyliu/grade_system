@@ -1,6 +1,6 @@
 #!/bin/bash
 
-filename=/home/zheyuan/student_grades.csv
+filename=./191_sample.csv
 
 #the function takes in the line_num and returns the sum of all grades
 get_grades(){
