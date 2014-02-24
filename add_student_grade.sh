@@ -1,5 +1,6 @@
 #!/bin/bash
 
+filename=/home/zheyuan/student_grades.csv
 #find the row the selected student is in
 look_for_stud () {
 local count=1
@@ -14,7 +15,7 @@ do
 	position=$(expr "$count" + 0)
         count=$(expr "$count" + 1)
     fi
-done < 191_sample.csv
+done < $filename
    
 echo $position
 }
@@ -23,7 +24,7 @@ echo $position
 num_col() {
 local count=1
 local position=0
-local assignments=$(cat 191_sample.csv | head -1)
+local assignments=$(cat $filename | head -1)
 local temp_var="$1,"
 for str in $assignments
 do
@@ -40,20 +41,25 @@ done
 echo $position
 }
 
+#read inputs
+echo "Pennkey:"
+read pennkey
+echo "Homework Label:"
+read hw
 
 # check valid input
-if [[ "$1" = "" ]] || [[ "$2" = "" ]]
+if [[ "$pennkey" = "" ]] || [[ "$hw" = "" ]]
 then
     echo "Invalid input"
 else
-    row_num=$(look_for_stud $1)
-    col_num=$(num_col $2)
+    row_num=$(look_for_stud $pennkey)
+    col_num=$(num_col $hw)
     if [[ "$row_num" = 0 ]] || [[ "$col_num" = 0 ]]
     then
 	echo "Student or assignment not found"
     else  
         #if both the student and the assignment are found
-        student=$(sed -n "${row_num}p" 191_sample.csv)
+        student=$(sed -n "${row_num}p" $filename)
         #take user input for the student score
         echo "Score:"
         read student_score
@@ -77,7 +83,7 @@ else
         done
         #make the change to the original csv
 	new_student=${array[@]}
-        sed -i "$row_num c\\$new_student" 191_sample.csv
+        sed -i "$row_num c\\$new_student" $filename
 	echo "Grade added successfully"
     fi   
 fi    

@@ -7,7 +7,7 @@ then
 	exit 1
 fi
 
-filename=191_sample.csv
+filename=/home/zheyuan/student_grades.csv
 pennkey=$1
 
 #read the list headers / categories

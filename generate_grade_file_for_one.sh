@@ -1,6 +1,6 @@
 #!/bin/bash
 
-filename=191_sample.csv
+filename=/home/zheyuan/student_grades.csv
 directory=grade_files
 
 #check valid input

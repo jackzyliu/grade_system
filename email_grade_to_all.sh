@@ -1,6 +1,6 @@
 #!/bin/bash
 
-filename=191_sample.csv
+filename=/home/zheyuan/student_grades.csv
 email_domain=@seas.upenn.edu
 
 #check input

@@ -5,8 +5,8 @@ Created on Dec 30, 2013 by Zheyuan Liu
 Friendly reminder : All the scripts recognizes the database under the default database name "$191_sample.csv" within the same directory. Please feel free to change the pathname for the database file using the "change_database_name.sh" file. It is recommended to run all the scripts in this directory.
 
 Name: add_student.sh
-Usage: ./add_student.sh [pennkey] [last_name] [first_name]
-Description: update the database with a new row that takes in the student' pennkey, last name, and first name; the student's grades for all the missing assignments are zeros; 
+Usage: ./add_student.sh 
+Description: the user should enter relevant information when prompted; the script updates the database with a new row that takes in the student' pennkey, last name, and first name; the student's grades for all the missing assignments are zeros; 
 script will notify if the action is successful or if any of three arguments are missing 
 
 Name: remove_student.sh
@@ -20,8 +20,8 @@ Desctiption: updates the database with a new assignment; the user will be prompt
 script will notify if the action is successful
 
 Name: add_student_grade.sh
-Usage: ./add_student_grade.sh [pennkey] [assignment_label]
-Description: the user will be prompted to enter the student's score for the assignment; updates the database with the new assignment score
+Usage: ./add_student_grade.sh 
+Description: the user will be prompted to enter the student's identity key, homework label, and score for the assignment; updates the database with the new assignment score
 script will notify if the action is successful or if the student or assignment is not found
 
 

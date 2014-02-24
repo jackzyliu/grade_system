@@ -17,6 +17,6 @@ do
 	if [[ "$shfile" = "change_database_name.sh" ]]
 	then continue
 	else
-		sed -i "" "s/filename=.*/filename=$new_name/" $shfile
+		sed -i "s|filename=.*|filename=$new_name|" $shfile
 	fi
 done
